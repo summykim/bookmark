@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Confirm Delete {% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="alert alert-danger">Do you wan to delete bookmark "{{object}}"?</div>
+    <input type="submit" value="삭제" class="btn btn-info btn-sm">
+</form>
+{% endblock %}
